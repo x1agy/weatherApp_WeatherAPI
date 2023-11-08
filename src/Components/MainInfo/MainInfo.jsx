@@ -65,7 +65,7 @@ function MainInfo(weatherData){
             <Box
                 sx={{
                     backgroundColor:"white",
-                    width:"fit-content",
+                    width:"600px",
                     mt:"5px",
                     ml:"20px",
                     borderRadius:"10px",

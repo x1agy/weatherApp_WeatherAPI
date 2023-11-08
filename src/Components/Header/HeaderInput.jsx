@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 function Input({setSearchLocation}){
 
-    const [inputValue, setInputValue] = useState()
+    const [inputValue, setInputValue] = useState("")
     const [openSnackbarBool, setOpenSnackBarBool] = useState(false);
 
     function findLocation(value){
