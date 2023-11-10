@@ -48,6 +48,11 @@ function App() {
         backgroundColor:"lightblue",
         height:"fit-content",
         position:"relative",
+        textAlign:"center",
+        display:'flex',
+        flexDirection:"column",
+        justifyContent:"center",
+        alignItems:"center"
       }}
     >
       <Input 

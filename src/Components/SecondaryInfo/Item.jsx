@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Modal, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Modal, Typography } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function Item(itemData){
@@ -22,9 +22,7 @@ function Item(itemData){
         bgcolor: 'background.paper',
         border: '2px solid #000',
         boxShadow: 24,
-        p: 4,
-        display:"flex",
-        flexWrap:"wrap",
+        p: 2,
     };
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -34,28 +32,38 @@ function Item(itemData){
     for(const hour in itemData.itemData.hour){
         hoursArray.push(itemData.itemData.hour[hour])
     }
-
+    console.log(itemData)
     return(
         <Item
             sx={{
                 m:"10px",
                 width:"100px",
-                cursor:"pointer"
+                height:"200px",
+                position:"relative"
             }}
-            onClick={handleOpen}
         >
             <Typography>{itemData.itemData.date}</Typography>
             <img src={itemData.itemData.day.condition.icon} alt="" />
             <Typography
                 sx={{wordWrap:"break-word"}}
             >{itemData.itemData.day.condition.text}</Typography>
+            <Typography>
+                {itemData.itemData.day.avgtemp_c}<b> C</b>
+            </Typography>
+            <Button
+                onClick={handleOpen}
+                sx={{
+                    position:"absolute",
+                    bottom:"0",
+                    left:"10px"
+                }}
+            >More info</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
             >
                 <Box 
                     sx={styleForDayModalInSecondaryInfo}
-                    // onBlur={handleClose}
                 >
                     <Typography variant="h6">
                         Weather in {itemData.itemData.date}, {itemData.itemData.day.condition.text}, average temperature: {itemData.itemData.day.avgtemp_c}
@@ -74,7 +82,7 @@ function Item(itemData){
                             return(
                                 <Accordion
                                     sx={{
-                                        width:"180px"
+                                        width:"180px",
                                     }}
                                 >
                                     <AccordionSummary
@@ -97,11 +105,19 @@ function Item(itemData){
                                             Wind speed: {hour.wind_kph}km
                                         </Typography>
                                     </AccordionDetails>
-
                                 </Accordion>
                             )
                         })}
                     </Box>
+                    <Button
+                        sx={{
+                            m:2,
+                            mb:0,
+                            ml:0
+                        }}
+                        variant="outlined"
+                        onClick={() => setOpen(false)}
+                    >Close</Button>
                 </Box>
             </Modal>
         </Item>

@@ -18,7 +18,7 @@ function SecondaryInfo({weatherData}){
         <Stack
             direction="row"
             sx={{
-                ml:"20px",
+                ml:"70px",
                 mt:"20px",
                 width:"600px",
                 flexWrap:"wrap"

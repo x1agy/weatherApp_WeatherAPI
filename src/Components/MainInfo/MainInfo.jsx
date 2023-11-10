@@ -46,7 +46,7 @@ function MainInfo(weatherData){
                     position:"relative"
                 }}
             >
-                <img src={icon} alt="" width="80px" style={{marginLeft:"10px", marginTop:"10px" }} />
+                <img src={icon} alt="" width="80px" style={{marginLeft:"10px" }} />
                 <Typography
                     variant="h2"
                     sx={{mt:"5px"}}
@@ -55,7 +55,7 @@ function MainInfo(weatherData){
                     sx={{
                         position:"absolute",
                         top:"70px",
-                        left:"1.6%"
+                        left:"3.5%"
                     }}
                 >
                     <b>Region:</b> {region} <b>Local time:</b> {localtime.slice(-5)} <b>Last updated:</b> {lastUpdated}
@@ -66,7 +66,7 @@ function MainInfo(weatherData){
                 sx={{
                     backgroundColor:"white",
                     width:"600px",
-                    mt:"5px",
+                    mt:"15px",
                     ml:"20px",
                     borderRadius:"10px",
                 }}

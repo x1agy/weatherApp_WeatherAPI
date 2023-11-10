@@ -26,16 +26,16 @@ function Input({setSearchLocation}){
     return(
         <Box
             sx={{
-                position:"relative"
+                position:"relative",
+                display:"flex"
             }}
             onSubmit={() => findLocation(inputValue)}
         >
             <TextField
                 sx={{
-                    width:"80%",
+                    width:"400px",
                     mt:"20px",
                     bgcolor:"white",
-                    ml:"18px"
                 }}
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -45,7 +45,6 @@ function Input({setSearchLocation}){
                 sx={{
                     mt:"20px",
                     height:"55px",
-                    position:"absolute",
                 }}
                 onClick={() => findLocation(inputValue)}
             >
@@ -56,7 +55,7 @@ function Input({setSearchLocation}){
                     }}
                 />
             </Button>
-            
+
             <Snackbar 
                 open={openSnackbarBool}
                 autoHideDuration={3000}
