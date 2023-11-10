@@ -28,6 +28,7 @@ function Input({setSearchLocation}){
             sx={{
                 position:"relative"
             }}
+            onSubmit={() => findLocation(inputValue)}
         >
             <TextField
                 sx={{
@@ -55,6 +56,7 @@ function Input({setSearchLocation}){
                     }}
                 />
             </Button>
+            
             <Snackbar 
                 open={openSnackbarBool}
                 autoHideDuration={3000}
