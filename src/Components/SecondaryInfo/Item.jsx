@@ -36,8 +36,8 @@ function Item(itemData){
     return(
         <Item
             sx={{
-                m:"10px",
-                width:"100px",
+                m:"5px",
+                width:"110px",
                 height:"200px",
                 position:"relative"
             }}
@@ -55,7 +55,7 @@ function Item(itemData){
                 sx={{
                     position:"absolute",
                     bottom:"0",
-                    left:"10px"
+                    left:"16px"
                 }}
             >More info</Button>
             <Modal

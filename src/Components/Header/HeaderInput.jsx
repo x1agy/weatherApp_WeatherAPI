@@ -33,7 +33,8 @@ function Input({setSearchLocation}){
         >
             <TextField
                 sx={{
-                    width:"400px",
+                    width:"420px",
+                    ml:"20px",
                     mt:"20px",
                     bgcolor:"white",
                 }}
