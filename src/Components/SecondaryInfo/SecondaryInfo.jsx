@@ -8,6 +8,7 @@ function SecondaryInfo({weatherData}){
     useEffect(() => {
         if(weatherData){
             const itemsArray = []
+            //transfer objects to one array
             for(const item in weatherData.forecast.forecastday){
                 itemsArray.push(weatherData.forecast.forecastday[item])
             }

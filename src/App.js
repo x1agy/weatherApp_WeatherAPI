@@ -40,7 +40,6 @@ function App() {
 
   }, [currentLocation, searchLocation])
 
-  console.log(weatherDataPerDay)
   return (
     <Box
       sx={{

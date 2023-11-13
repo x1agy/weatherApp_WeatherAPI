@@ -1,0 +1,1 @@
+application working by free weather API using fetch requests 

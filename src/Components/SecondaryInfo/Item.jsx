@@ -28,11 +28,11 @@ function Item(itemData){
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     
+    //transfer objects to one array
     const hoursArray = []
     for(const hour in itemData.itemData.hour){
         hoursArray.push(itemData.itemData.hour[hour])
     }
-    console.log(itemData)
     return(
         <Item
             sx={{

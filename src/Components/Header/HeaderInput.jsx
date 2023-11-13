@@ -7,6 +7,7 @@ function Input({setSearchLocation}){
     const [inputValue, setInputValue] = useState("")
     const [openSnackbarBool, setOpenSnackBarBool] = useState(false);
 
+    // API tool finding location by props
     function findLocation(value){
         fetch(`http://api.weatherapi.com/v1/search.json?key=7e51a85e2d9b497f9f2102041230811&q=${value}`,{
             method:"GET"
